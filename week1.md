@@ -8,4 +8,6 @@ A third approach is to create a mapping between classical and quantum algorithms
 
 
 
+[Existing issues](https://github.com/leumasli/EE113D-Blog/issues)
+[Submit feedback here](https://github.com/leumasli/EE113D-Blog/issues/new)
 [Return to overview](index.md)
