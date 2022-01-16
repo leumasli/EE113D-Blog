@@ -6,3 +6,4 @@ This is the blog for my ECE 113D project for Winter 2022. If you have any feedba
 
 - [Week 1: Overview on current quantum machine learning algorithms](week1.html)
 - [Week 2: Literature review on  Quantum Variational Classifier](week2.html)
+
