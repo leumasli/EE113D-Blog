@@ -1,8 +1,8 @@
 # Quantum Variational Classifier
 
-This week, I continue my literature review on possible candidate network structure for my quantum neural network that is capable of running on near term devices. There's a particular paper that introduced a structure that's similar to support vector machines and I'll make a brief introduction of this concept.
+This week, I continue my literature review on possible candidate network structures for my quantum neural network that is capable of running on near term devices. There's a particular paper that introduced a structure that's similar to support vector machines and I'll make a brief introduction of this concept.
 
-In the paper *Supervised learning with quantum-enhanced feature spaces*, the authors developed a SVM-like network structure which they called quantum variational classifier. The network consists of 4 parts: qubit initialization, data-mapping with quantum features, weight gates and measurements, as shown in the figure below.
+In the paper [Supervised learning with quantum-enhanced feature spaces](https://www.nature.com/articles/s41586-019-0980-2), the authors developed an SVM-like network structure which they called quantum variational classifier. The network consists of 4 parts: qubit initialization, data-mapping with quantum features, weight gates and measurements, as shown in the figure below.
 
 ![image-20220115213512965](week2.assets/image-20220115213512965.png)
 
@@ -12,7 +12,7 @@ To obtain quantum advantage on feature conversion, instead of mapping each input
 
 ![image-20220115213548345](week2.assets/image-20220115213548345.png)
 
-Note that the high dimension in Hilbert space provided by quantum computers *does not* provide exponential speedup by default because in the classical neural networks, high dimension matrix products are handles by [Kernel method](https://en.wikipedia.org/wiki/Kernel_method) which is already efficient.
+Note that the high dimension in Hilbert space provided by quantum computers *does not* provide exponential speedup by default because in the classical neural networks, high dimension matrix products are handled by [Kernel method](https://en.wikipedia.org/wiki/Kernel_method) which is already efficient.
 
 ## Quantum variational classification model
 
@@ -44,7 +44,8 @@ $$
 \operatorname{Pr}\left(\tilde{m}_{\mid T}(s) \neq y \mid s \in T_{y}\right) &=\sum_{j=0}^{\left\lceil\left(\frac{1-y b}{2}\right) R\right\rceil}\left(\begin{array}{c}
 R \\
 j
-\end{array}\right) p_{c}^{R-j}\left(1-p_{c}\right)^{j} \approx \int_{-\infty}^{\gamma} d x \frac{1}{\sqrt{2 \pi} \beta} \exp \left(-\frac{1}{2}\left(\frac{x-a}{\beta}\right)^{2}\right) \\
+\end{array}\right) p_{c}^{R-j}\left(1-p_{c}\right)^{j} \\ 
+&\approx \int_{-\infty}^{\gamma} d x \frac{1}{\sqrt{2 \pi} \beta} \exp \left(-\frac{1}{2}\left(\frac{x-a}{\beta}\right)^{2}\right) \\
 &=\frac{1}{\sqrt{\pi}} \int_{-\infty}^{\frac{\gamma-a}{\sqrt{2} \beta}} d z e^{-z^{2}}=\frac{1}{2} \operatorname{erf}\left(\frac{\gamma-a}{\sqrt{2} \beta}\right)+\frac{1}{2} \\
 &=\frac{1}{2} \operatorname{erf}\left(\sqrt{R} \frac{\frac{1-y b}{2}-p_{y}}{\sqrt{2\left(1-p_{y}\right) p_{y}}}\right)+\frac{1}{2}
 \end{aligned}
@@ -75,9 +76,3 @@ The model also differs from SVM in several ways, mainly due to the shape of the 
 The loss function for QVC doesn't increase linearly with the error margin, which means it's most sensitive to the error around the classifying hyperplane.
 
 Overall, the most noteworthy feature of the quantum variational classifier is its ability to efficiently map classical data to quantum and demonstrate quantum advantage at the same time. I think it's suitable to run on near-term quantum hardware and is therefore potential candidate suitable for the current project.
-
----
-
-*[Submit feedback](https://github.com/leumasli/EE113D-Blog/issues/new)* or <br>
-*[Return to overview](index.md)*
-

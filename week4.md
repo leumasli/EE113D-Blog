@@ -65,8 +65,3 @@ $$
 - Note that HHL with $\mathcal{O}\left(\log (N) s^{2} \kappa^{2} / \epsilon\right)$ is more sensitive to sparsity, condition of the matrix and error than traditional algorithms with $\mathcal{O}(N s \kappa \log (1 / \epsilon))$
 
 - The complexity of HHL is roughly $\mathcal{O}(\log(N))$ which is actually less than printing out all the terms of the result state $|x\rangle$ which is $\mathcal O(N)$! In realistic situations, we usually don't care about the specific values of $x$ but rather some other expressions such as the expectation value of some operator $\langle x | M | x\rangle$. HHL can be a useful subroutine for such tasks.
-
----
-
-*[Submit feedback](https://github.com/leumasli/EE113D-Blog/issues/new)* or <br>
-*[Return to overview](index.md)*
