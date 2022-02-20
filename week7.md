@@ -93,6 +93,6 @@ The Circuit QNN uses quantum circuit as a base and uses similar gradient method 
 
 ## Milestone Update
 
-**Goal **:The goal for second milestone is to build a working network consists of both forward and backward passes. 
+**Goal**: The goal for second milestone is to build a working network consists of both forward and backward passes. 
 
 **Progress**: I have largely accomplished the goal. I have built a working trainable Quantum network as a proof of concept. Although the current model consists only a single qubit, the network is not very difficult to scale up. It will probably only require 4 qubits for basic classification tasks. I found the `Qiskit Machine Learning` package which provides convenient APIs for forward and backward passes as well as good integration with PyTorch. 
