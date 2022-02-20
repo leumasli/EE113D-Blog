@@ -10,3 +10,5 @@ This is the blog for my ECE 113D project for Winter 2022. If you have any feedba
 - [Week 4: Solving Linear Equations with HHL algorithm](week4.html)
 - [Week 5: Proof of Concept Forward Pass](week5.html)
 - [Week 6: Backward Pass](week6.html)
+- [Week 7: Implementation of Backward Pass and Milestone](week7.html)
+
